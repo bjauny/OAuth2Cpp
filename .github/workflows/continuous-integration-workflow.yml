@@ -1,0 +1,14 @@
+name: OAuth2Cpp CI
+
+on: [push]
+
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Invoke cmake
+        run: |
+          cmake
+          make
+
