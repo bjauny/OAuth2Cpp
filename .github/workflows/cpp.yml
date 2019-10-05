@@ -9,9 +9,9 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: look for curl
-      run: find / -type f -name "curl.h"
-    - name: cmake
+    - name: Install dependencies
+      run: apt-get install libcurl3-gnutls-dev
+    - name: Call cmake
       run: cmake .
     - name: make
       run: make
