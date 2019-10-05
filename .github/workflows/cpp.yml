@@ -9,5 +9,10 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - uses: ./github_actions
+    - name: look for curl
+      run: find / -type f -name "curl.h"
+    - name: cmake
+      run: cmake .
+    - name: make
+      run: make
 
